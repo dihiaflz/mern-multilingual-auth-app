@@ -26,19 +26,21 @@ const Home = () => {
     useEffect(() => {
         const updateVisibleCount = () => {
             const width = window.innerWidth;
-            if (width <= 460) {
-                setVisibleCount(2);
+            if (width <= 500) {
+                setVisibleCount(2); // Définit visibleCount à 2 pour les écrans <= 500
             } else if (width <= 720) {
-                setVisibleCount(4);
+                setVisibleCount(4); // Définit visibleCount à 4 pour les écrans entre 501 et 720
             } else {
-                setVisibleCount(5);
+                setVisibleCount(5); // Définit visibleCount à 5 pour les écrans > 720
             }
         };
-
-        updateVisibleCount();
-        window.addEventListener('resize', updateVisibleCount);
-
-        return () => window.removeEventListener('resize', updateVisibleCount);
+    
+        updateVisibleCount(); // Appel initial
+        console.log("verdict : ", visibleCount); // Peut être déplacé dans un autre useEffect
+    
+        window.addEventListener('resize', updateVisibleCount); // Met à jour lors du redimensionnement
+    
+        return () => window.removeEventListener('resize', updateVisibleCount); // Nettoyage
     }, []);
 
     const getContainerClassName = () => {
