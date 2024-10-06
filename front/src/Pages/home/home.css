@@ -1,0 +1,330 @@
+.navbar {
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 22vh;
+    align-items: center;
+    align-content: center;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    justify-content: space-between;
+    background-color: #fff;
+}
+
+.language-selector {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%; /* Place le dropdown juste en dessous de la langue sélectionnée */
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1; /* S'assurer que le dropdown reste au-dessus des autres éléments */
+    display: flex;
+    flex-direction: column;
+}
+
+.dropdown .drop {
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.dropdown .drop:hover {
+    background-color: #f1f1f1;
+}
+
+.home .butons {
+    padding-right: 3vw;
+    display: flex;
+    gap: 1vw;
+}
+
+.home .buton1 {
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 50px;
+    border-color: #02BE62;
+    font-size: 1rem;
+    color: #02BE62;
+    background-color: white;
+    padding: 2vh 2vw;
+    cursor: pointer;    
+}
+
+
+.home .buton1:hover {
+    color: #fff;
+    background-color: #02BE62;
+}
+
+.home .buton2 {
+    display: inline-block;
+    white-space: nowrap;
+    border-radius: 50px;
+    font-size: 1rem;
+    background-color: #02BE62;
+    border-color: #02BE62;
+    color: #fff;
+    padding: 2vh 3.2vw;
+    cursor: pointer;
+}
+
+.home .titles {
+    display: flex;
+    gap: 2vw;
+}
+
+.home .title {
+    all: unset;
+    color: #310300;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.home .logo {
+    width: 15vw;
+    height: 21vh;
+    padding-left: -10vw;
+}
+
+.home .accueil {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5vw;
+    background-color: #E8E9EB;
+    margin-top: 26vh;
+} 
+
+.home .picture {
+    height: 60vh;
+    align-self: flex-end;
+}
+
+.home .text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 30vw;
+}
+
+.home .titre {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Montserrat';
+    color: #FF3131;
+    padding-bottom: 5vh;
+}
+
+.home .titre2{
+    color: #310300;
+    font-family: 'Lato';
+    padding-bottom: 10vh;
+}
+
+.home .titre3{
+    color: #310300;
+    font-family: 'Lato';
+    padding-bottom: 1vh;
+}
+
+.home .titre1{
+    font-family: 'Montserrat';
+    padding-bottom: 5vh;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #FF3131;
+}
+
+.home .titre4{
+    color: #310300;
+    font-family: 'Lato';
+    font-size: 0.85rem;
+}
+
+.home .titre5{
+    color: #fff;
+    font-family: 'Lato';
+    align-self: center;
+}
+
+.home .about {
+    padding: 4vh 5vh;
+}
+
+.home .matieres {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 5vh;
+    padding-bottom: 20vh;
+}
+
+
+.home .button {
+    all: unset;
+}
+
+.home .item {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2vh;
+    padding: 4vh 2vh;
+    background-color: #E8E9EB;
+    width: 10vw;
+}
+
+.home .decoration {
+    height: 10vh;
+    width: 10vw;
+}
+
+
+
+.container {
+    display: flex;
+    gap: 5vw;
+    align-items: center;
+    align-self: center;
+  }
+  
+  .container-before {
+    display: flex;
+    gap: 5vw;
+    padding-right: 8vw;
+    align-self: center;
+  }
+  
+  .container-after {
+    display: flex;
+    gap: 5vw;
+    padding-left: 8vw;
+    align-self: center;
+  }
+
+  .before-image {
+    width: 3vw;
+    height: 3vw;
+  }
+  
+  .after-image {
+    width: 3vw;
+    height: 3vw;
+  }
+
+.home .matieres-display {
+    display: flex;
+    gap: 2vw;
+}
+
+.home .contacts {
+    display: flex;
+    flex-direction: column;
+    padding: 6vh 10vw;
+    padding-bottom: 3vh;
+    background-color: #02BE62;
+    text-align: center;
+} 
+
+.home .social-media {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 8vh;
+}
+
+.home .part {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.home .line {
+    display: flex;
+    gap: 1vw;
+    align-items: center;
+}
+
+.home .social {
+    width: 2vw;
+}
+
+
+
+@media screen and (max-width: 720px) {
+    .home .titles {
+        display: none;
+    }
+
+    .home .picture {
+        display: none;
+    }
+
+    .home .accueil {
+        justify-content: center;
+    }
+
+    .home .navbar {
+        justify-content: center;
+        gap: 20vw;
+    }
+
+    .home .text {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 3vh 0;
+    }
+
+    .home .logo {
+        height: 20vh;
+        width: 25vw;
+    }
+
+    .home .item {
+        width: 14vw;
+    }
+}
+
+
+@media screen and (max-width: 460px) {
+    .home .navbar {
+        gap: 10vw;
+    }
+
+    .home .buton1 {
+        font-size: 0.8rem;
+    }
+
+    .home .buton2 {
+        font-size: 0.8rem;
+    }
+
+    .home .logo {
+        height: 20vh;
+        width: 30vw;
+    }
+    
+    .home .item {
+        width: 22vw;
+    }
+
+    .home .contacts {
+        width: 100vw;
+    }
+
+    .home .social{
+        width: 6vw;
+    }
+}
+
+
+
+  

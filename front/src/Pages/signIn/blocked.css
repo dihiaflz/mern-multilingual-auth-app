@@ -1,0 +1,51 @@
+.Blocked {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+}
+
+.logo  {
+    padding: 0;
+    height: 35vh;
+    width: 25vw;
+}
+
+.text {
+    font-family: 'Lato';
+    color: #310300;
+}
+
+.deco {
+    height: 60vh;
+    width: 20vw;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+}
+
+.contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8vh;
+}
+
+h1 {
+    text-align: center;
+    width: 50vw;
+}
+
+
+@media only screen and (max-width: 767px) {
+    .Blocked .deco {
+        display: none;
+    }
+
+    .Blocked .logo  {
+        height: 30vh;
+        width: 40vw;
+    }
+}
