@@ -1,4 +1,5 @@
 import './App.css';
+import { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import SignIn from './Pages/signIn/SignIn';
 import ForgotPassword1 from './Pages/signIn/ForgotPassword1';
@@ -10,6 +11,9 @@ import Error500 from './Pages/general/500Error';
 import Home from './Pages/home/home';
 
 function App() {
+  useEffect(() => {
+    document.title = 'Hissati education';
+  }, []);
   return (
     <div className="App">
       <Router>
