@@ -9,9 +9,7 @@ const app = express();
 // Middleware setup
 app.use(bodyParser.json()); // Parse incoming JSON requests
 app.use(bodyParser.urlencoded({ extended: true })); // Parse URL-encoded requests
-app.use(cors({
-    origin: 'http://localhost:3000' // Allow requests from this origin (React frontend)
-}));
+app.use(cors());
 
 // Routes setup
 const signIn = require("./routes/signIn"); // SignIn route
