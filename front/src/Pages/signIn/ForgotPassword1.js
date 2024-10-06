@@ -7,6 +7,8 @@ import logo from "../../Assets/hissati0.svg";
 import next from "../../Assets/Next.svg";
 
 const ForgotPassword1 = () => {
+    const backendUrl = process.env.REACT_APP_SERVER_URL;
+
     // State for managing error messages and showing/hiding error
     const [errorMessage, setErrorMessage] = useState("");
     const [showError, setShowError] = useState(false);
@@ -35,7 +37,7 @@ const ForgotPassword1 = () => {
             console.log(formData); // Log form data for debugging
 
             // Send POST request to the server with the email input
-            const response = await fetch("http://localhost:5000/signIn/forgotPassword", { 
+            const response = await fetch(`${backendUrl}/signIn/forgotPassword`, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json', // Set headers to indicate JSON payload

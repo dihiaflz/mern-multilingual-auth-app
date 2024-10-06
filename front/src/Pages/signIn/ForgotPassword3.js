@@ -7,6 +7,8 @@ import logo from "../../Assets/hissati0.svg";
 import next from "../../Assets/Next.svg";
 
 const ForgotPassword3 = () => {
+    const backendUrl = process.env.REACT_APP_SERVER_URL;
+
     // State for error message display
     const [errorMessage, setErrorMessage] = useState("");
     const [showError, setShowError] = useState(false);
@@ -42,7 +44,7 @@ const ForgotPassword3 = () => {
                 const token = localStorage.getItem('accessToken');
 
                 // Make a POST request to update the password
-                const response = await fetch("http://localhost:5000/signIn/forgotPassword/new", { 
+                const response = await fetch(`${backendUrl}/signIn/forgotPassword/new`, { 
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

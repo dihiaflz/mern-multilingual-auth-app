@@ -15,7 +15,7 @@ let randomNumber; // Will hold the randomly generated code for password reset
 signInRouter.post("/", async (req, res) => {
   try {
     // Find user by email
-    console.log(req.body.email)
+    console.log(req.body)
     const user = await Users.findOne({ email: req.body.email });
     if (!user) {
         console.log("No account is associated with this email");

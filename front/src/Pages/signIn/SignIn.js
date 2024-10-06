@@ -6,6 +6,8 @@ import deco from "../../Assets/deco2.svg";
 import logo from "../../Assets/hissati0.svg";
 
 const SignIn = () => {
+    const backendUrl = process.env.REACT_APP_SERVER_URL;
+
     // State for error message display
     const [errorMessage, setErrorMessage] = useState("");
     const [showError, setShowError] = useState(false);
@@ -34,9 +36,10 @@ const SignIn = () => {
         e.preventDefault(); // Prevent default form submission behavior
         try {
             console.log(formData); // Log form data for debugging
+            console.log(backendUrl)
 
             // Make a POST request to sign in the user
-            const response = await fetch("http://localhost:5000/signIn", { 
+            const response = await fetch(`${backendUrl}/signIn`, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

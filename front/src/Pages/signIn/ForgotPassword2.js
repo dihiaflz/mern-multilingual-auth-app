@@ -7,6 +7,8 @@ import logo from "../../Assets/hissati0.svg";
 import next from "../../Assets/Next.svg";
 
 const ForgotPassword2 = () => {
+    const backendUrl = process.env.REACT_APP_SERVER_URL;
+
     // State for storing error messages and controlling error display
     const [errorMessage, setErrorMessage] = useState("");
     const [showError, setShowError] = useState(false);
@@ -36,7 +38,7 @@ const ForgotPassword2 = () => {
             const token = localStorage.getItem('accessToken'); // Retrieve the token from local storage
 
             // Make a POST request to resend the confirmation code
-            const response = await fetch("http://localhost:5000/signIn/forgotPassword/repeat", { 
+            const response = await fetch(`${backendUrl}/signIn/forgotPassword/repeat`,{ 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -75,7 +77,7 @@ const ForgotPassword2 = () => {
             const token = localStorage.getItem('accessToken'); // Get token from local storage
 
             // Make a POST request to validate the confirmation code
-            const response = await fetch("http://localhost:5000/signIn/forgotPassword/code", { 
+            const response = await fetch(`${backendUrl}/signIn/forgotPassword/code`, { 
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
